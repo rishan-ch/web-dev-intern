@@ -213,7 +213,7 @@
                 
                 <div class="media">
                     <video loop autoplay muted class="video1">
-                        <source src="./medias/coffee.mp4" class="video" type="video/mp4">
+                        <source src="./medias/coffee making.mp4" class="video" type="video/mp4">
                     </video>
                     <video loop autoplay muted>
                         <source src="./medias/latte art.mp4" type="video/mp4">
@@ -223,27 +223,82 @@
             </div>
         </div>
 
-        <!-- <h1 class="menu-title">Meet our Team</h1>
+        <h1 class="menu-title">Meet our Team</h1>
         <div class="meet-the-team">
-            <div class="member">
-                <div class="member-info">
-                    <h2>Anant Ambani</h2>
-                    <p>Manager</p>
+            <div class="slider">
+                <div class="member">
+                    <div class="member-info">
+                        <h2>Emily Johnson</h2>
+                        <p>Manager</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem4.jpg" alt="">
+                    </div>
                 </div>
-                <div class="profile">
-                    <img src="./medias/Waiter.jpg" alt="">
+
+                <div class="member">
+                    <div class="member-info">
+                        <h2>Liam Anderson</h2>
+                        <p>Head Barista</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem6.jpg" alt="">
+                    </div>
                 </div>
+
+                <div class="member">
+                    <div class="member-info">
+                        <h2>William Thompson</h2>
+                        <p>Receptionist</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem5.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-info">
+                        <h2>Sophia Martinez</h2>
+                        <p>Barista</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-info">
+                        <h2>Noah Clark</h2>
+                        <p>Barista</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-info">
+                        <h2>Olivia Brown</h2>
+                        <p>Waiter</p>
+                    </div>
+                    <div class="profile">
+                        <img src="./medias/mem3.jpg" alt="">
+                    </div>
+                </div>
+
+                
             </div>
+            <button class="prev" onclick="moveSlider(-1)"><i class='bx bx-chevron-left'></i></button>
+            <button class="next" onclick="moveSlider(1)"><i class='bx bx-chevron-right'></i></button>
+        </div>
 
-        </div> -->
 
-        <div class="testimonials">
+        <h1 class="menu-title">Customer Reviews</h1>
+        <div class="review-Container">
             <div class="inner">
-              <h1>Customer Reviews</h1>
-      
               <div class="row">
                 <div class="col">
-                  <div class="testimonial">
+                  <div class="review">
                     <img src="./medias/profile-pic2.jpg" alt="">
                     <div class="name">Rishan Chhunju</div>
                     <div class="stars">
@@ -261,7 +316,7 @@
                 </div>
       
                 <div class="col">
-                  <div class="testimonial">
+                  <div class="review">
                     <img src="./medias/profile-pic2.jpg" alt="">
                     <div class="name">Shreyash Ghale</div>
                     <div class="stars">
@@ -279,7 +334,7 @@
                 </div>
       
                 <div class="col">
-                  <div class="testimonial">
+                  <div class="review">
                     <img src="./medias/profile-pic2.jpg" alt="">
                     <div class="name">Swagat Gautam</div>
                     <div class="stars">
@@ -360,6 +415,25 @@
                 menu.style.display = 'block';
             }
         });
+
+        let slideIndex = 0; // Initialize slideIndex
+const slideWidth = document.querySelector('.member').offsetWidth; // Calculate slideWidth dynamically
+
+function moveSlider(direction) {
+    const slider = document.querySelector('.slider');
+    const maxSlides = slider.children.length;
+    
+    slideIndex += direction;
+    
+    if (slideIndex < 0) {
+        slideIndex = maxSlides - 1;
+    } else if (slideIndex >= maxSlides) {
+        slideIndex = 0;
+    }
+    
+    const offset = -slideIndex * slideWidth;
+    slider.style.transform = `translateX(${offset}px)`;
+}
     </script>
 </body>
 </html>
