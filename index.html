@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caffee Company</title>
     <link rel="icon" href="./medias/company logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="./stylesheets/menu.css">
     <link rel="stylesheet" href="./stylesheets/form.css">
@@ -20,7 +21,9 @@
     
 </head>
 <body>
+    <!-- landing section -->
     <header>
+        <!-- navigation bar -->
         <nav>
             <div id="logo">
                 <i class='bx bxs-coffee'></i>
@@ -34,6 +37,7 @@
                 <p>Signup</p>
                 
             </div>
+            <!-- 3 lines menu option -->
             <i id ="toggle" class='bx bx-menu'></i>
         </nav>
         <div class="landing-interaction">
@@ -42,10 +46,16 @@
             <button>Learn more</button>
         </div>
     </header>
+
+    <!-- body contents -->
     <div class="body">
+
+        <!-- Top picks, drinks container -->
         <h1 class="menu-title">Our Top Picks</h1>
         <div class="section-container">
             <div class="top-picks">
+
+                <!-- single item -->
                 <div class="item">
                     <div class="picture">
                         <img src="./medias/americano.jpg" alt="">
@@ -110,10 +120,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
         
-
+        <!-- drink of the day box -->
         <div class="section-container">
             <div class="drink-of-day">
                 <div class="item-pic">
@@ -128,6 +137,7 @@
             </div>
         </div>
 
+        <!-- menu -->
         <h1 class="menu-title">Our Menu</h1>
         <div class="section-container">
             <div class="top-picks">
@@ -195,9 +205,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
+        <!-- form for training -->
         <div class="section-container">
             <div class="form">
                 <div class="form-inputs">
@@ -212,7 +222,7 @@
                 </div>
                 
                 <div class="media">
-                    <video loop autoplay muted class="video1">
+                    <video loop autoplay muted>
                         <source src="./medias/coffee making.mp4" class="video" type="video/mp4">
                     </video>
                     <video loop autoplay muted>
@@ -223,6 +233,7 @@
             </div>
         </div>
 
+        <!-- card slider, js is implemented here -->
         <h1 class="menu-title">Meet our Team</h1>
         <div class="meet-the-team">
             <div class="slider">
@@ -285,14 +296,13 @@
                         <img src="./medias/mem3.jpg" alt="">
                     </div>
                 </div>
-
-                
             </div>
             <button class="prev" onclick="moveSlider(-1)"><i class='bx bx-chevron-left'></i></button>
             <button class="next" onclick="moveSlider(1)"><i class='bx bx-chevron-right'></i></button>
         </div>
 
 
+        <!-- review section -->
         <h1 class="menu-title">Customer Reviews</h1>
         <div class="review-Container">
             <div class="inner">
@@ -357,8 +367,8 @@
 
     </div>   
 
-
     <hr> 
+    <!-- footer section starts -->
     <footer>
         <div class="about-company footer-section">
             <div id="footer-logo" >
@@ -405,35 +415,7 @@
 
 
     <script>
-        let toggle = document.getElementById("toggle");
-        let menu = document.getElementById("nav-options");
-    
-        toggle.addEventListener("click", () => {
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        });
 
-        let slideIndex = 0; // Initialize slideIndex
-const slideWidth = document.querySelector('.member').offsetWidth; // Calculate slideWidth dynamically
-
-function moveSlider(direction) {
-    const slider = document.querySelector('.slider');
-    const maxSlides = slider.children.length;
-    
-    slideIndex += direction;
-    
-    if (slideIndex < 0) {
-        slideIndex = maxSlides - 1;
-    } else if (slideIndex >= maxSlides) {
-        slideIndex = 0;
-    }
-    
-    const offset = -slideIndex * slideWidth;
-    slider.style.transform = `translateX(${offset}px)`;
-}
     </script>
 </body>
 </html>
