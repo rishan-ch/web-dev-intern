@@ -1,0 +1,77 @@
+/* footer section */
+hr{
+    margin-top: 10vh;
+}
+footer{
+    display: flex;
+    padding: 0 7vw;
+    justify-content: space-between;
+}
+
+.footer-section{
+    width: 25vw;
+}
+
+hr{
+    width: 97%;
+}
+
+footer i{
+    font-size: 4vmin;
+    margin-right: 1vh;
+}
+
+footer p{
+    display: flex;
+    align-items: center;
+}
+
+.about-company p {
+    margin-top: 0;
+}
+
+.contact input{
+    padding-left: 1vw;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+.contact button{
+    margin-top: 3vh;
+    width: 7vw;
+    height: 5vh;
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+}
+
+#footer-logo{
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:1000px){
+     .footer-section p{
+        font-size: 10px;
+     }
+
+     .footer-section h2{
+        font-size: 14px;
+     }
+
+     .contact input{
+        font-size: 8px;
+        height: 20px;
+        width: 80px;
+    }
+
+    .contact button{
+        height: 25px;
+        margin-top: 1vh;
+        width: 70px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,176 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+}
+button{
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+/* hides scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+header{
+    color: white;
+    height: 100vmin;
+    width: 100%;
+    background: url(../medias/bg5.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#logo{
+    padding: 7px;
+    display: flex;
+    align-items: center;
+}
+
+#logo i{
+    font-size: 25px;
+}
+
+#logo h2{
+    margin: 0 10px;
+}
+
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 3vw;
+}
+
+#nav-options{
+    font-weight: 600;
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+}
+
+#nav-options p {
+    position: relative;
+    cursor: pointer;
+}
+
+#nav-options p::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; 
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#nav-options p:hover::after {
+    width: 100%;
+}
+
+#toggle{
+    padding-top: 5px;
+    font-size: 30px;
+    display: none;
+}
+
+.landing-interaction{
+    padding: 0vw 3vw;
+    margin: 33vh 0px;
+    text-shadow: 0 0 5px #000000;
+}
+
+.landing-interaction h1{
+    font-size: 3vmax;
+    width: 35%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.landing-interaction p{
+    padding: 0;
+    font-size: 20px;
+    margin: 3vh 0vh;
+}
+
+.landing-interaction button{
+    color: white;
+    background-color: #9C6644;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+.landing-interaction button:hover{
+    background-color: #7c4e31;
+    scale: 1.05;
+    transition: .3s;
+}
+
+@media(min-width:1001px){
+    #nav-options{
+        font-weight: 600;
+        display: flex;
+        gap: 4vw;
+        align-items: center;
+    }
+}
+
+@media(max-width:1000px){
+    #nav-options p{
+        margin-bottom: 20px;
+    }
+    .landing-interaction{
+        margin: 30% 0;
+    }
+    .landing-interaction h1{
+        width: 70%;
+        font-size: 20px;
+    }
+    .landing-interaction p{
+        font-size: 12px;
+        width: 60%;
+        margin: 1vh 0vh;
+    }
+
+    .landing-interaction button{
+        width: 85px;
+        height: 25px;
+        font-size: 11px;
+    }
+    #nav-options{
+        
+        text-align: center;
+        font-size: 12px;
+        display: block;
+        backdrop-filter: blur(5px);
+        height: 100vh;
+        border-top-left-radius: 50px;
+        width: 200px;
+        padding: 10px 0;
+        position: absolute;
+        right: 0px;
+        top: 40px;
+        display: none;
+    }
+
+    #toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+}

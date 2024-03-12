@@ -1,0 +1,81 @@
+/* Drink of the da section */
+.drink-of-day{
+    border-radius: 50px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    margin-top: 15vh;
+    height: 90vh;
+    display: flex;
+}
+
+.item-pic{
+    width: 50%;
+    
+}
+.item-pic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.dod-description{
+    width: 50%;
+    padding-top: 15vh;
+    padding-left: 3vw;
+}
+
+.dod-title{
+    font-size: 7vh;
+    margin: 5vh 0;
+}
+
+.dod-discount{
+    font-size: 4vh;
+}
+
+.dod-order{
+    width: 14vw;
+    height: 8vh;
+    font-weight: bold;
+    font-size: 3vh;
+    border-radius: 50px;
+    border-style: none;
+    background-color: black;
+    color: white;
+}
+
+@media(max-width:1000px){
+    .drink-of-day{
+        height: 700px;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        display: block;
+    }
+
+    .item-pic {
+        margin-top: 10px;
+        width:100%;
+    }
+    .dod-description{
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+    }
+    .dod-title{
+        padding: 0px;
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .dod-discount{
+        font-size: 20px;
+    }
+
+    .dod-order{
+        width: 70px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+

@@ -1,0 +1,47 @@
+/* meet the team
+
+.meet-the-team{
+    display: flex;
+    justify-content: space-between;
+}
+
+.member{
+    position: relative;
+    border-radius: 10px;
+    height: 60vh;
+    width: 18vw;
+}
+
+.profile{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.profile img{
+    height: 100%;
+}
+
+.member-info{
+    width: 90%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+
+}
+
+.member-info h2{
+    
+    margin: 2vh 0;
+    background-color: white;
+}
+
+
+.member-info p{
+    font-weight: bold;
+    margin: 0;
+    background-color: white;
+} */
